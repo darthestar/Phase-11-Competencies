@@ -1,0 +1,14 @@
+<h2>Review Form for <%= @restaurant.name %></h2>
+<%= render 'flash_errors' %>
+
+<%= form_for ([@restaurant, @review]) do |f| %>
+
+    <%= f.label :body, 'Review'  %>
+    <%= f.text_area :body %>
+
+    <%= f.label :rating, 'Rating' %>
+    <%= f.number_field :rating %>
+
+
+    <%= f.submit 'Add Review' %>
+<% end %>

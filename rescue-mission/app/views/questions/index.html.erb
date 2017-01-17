@@ -1,0 +1,10 @@
+
+<p class="page-header">Listing of Questions</p>
+
+<%= button_to 'Post Question', new_question_path, method: :get, class: :button %>
+
+  <ul class="no margin">
+    <% @questions.each do |question| %>
+      <li><%= link_to markdown(question.title), question_path(question) %></li>
+    <% end %>
+  </ul>

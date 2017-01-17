@@ -1,0 +1,13 @@
+<h2>Post an Answer:</h2>
+
+<%= form_for [@question, @answer] do |f| %>
+
+  <div class="row">
+    <%= f.label :body  %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Submit Answer', class: :button %>
+  </div>
+<% end %>
